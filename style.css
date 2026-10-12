@@ -1,0 +1,247 @@
+
+/* 1. Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+/* 2. Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  gap: 20px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #f97316;
+  text-decoration: none;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 26px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #334155;
+  font-size: 15px;
+}
+
+.navbar nav a:hover {
+  color: #f97316;
+}
+
+.nav-button,
+.button {
+  display: inline-block;
+  background-color: #f97316;
+  color: #ffffff;
+  padding: 11px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover,
+.button:hover {
+  background-color: #ea580c;
+}
+
+/* 3. Hero Section */
+.hero {
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  padding: 70px 8%;
+  background: linear-gradient(120deg, #fff7ed, #ffedd5);
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.tagline {
+  color: #ea580c;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: #172033;
+}
+
+.hero-content > p:not(.tagline) {
+  color: #64748b;
+  font-size: 17px;
+  margin-bottom: 28px;
+  max-width: 550px;
+}
+
+/* 4. Internship Cards */
+.internships {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.internships h2,
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.section-text {
+  color: #64748b;
+  margin-bottom: 35px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+.card {
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.card span {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #fff7ed;
+  color: #c2410c;
+  font-size: 13px;
+}
+
+/* 5. About Section */
+.about {
+  text-align: center;
+  padding: 55px 8%;
+  background-color: #f8fafc;
+}
+
+.about p {
+  color: #64748b;
+  margin-top: 10px;
+}
+
+/* 6. Footer */
+footer {
+  padding: 24px;
+  text-align: center;
+  background-color: #172033;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+/* 7. Tablet Responsive Design */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .navbar nav {
+    gap: 14px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero,
+  .internships {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* 8. Mobile Responsive Design */
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 60px 6%;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .internships {
+    padding: 50px 6%;
+  }
+
+  .internships h2,
+  .about h2 {
+    font-size: 27px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 24px;
+  }
+}
